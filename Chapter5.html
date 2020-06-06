@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 3;
+        var b = 5;
+        // addition
+        var c = a + b;
+        document.write("Sum of" + " " + a + " " + "and" + " " + b + " " + "is" + " " + c);
+
+        // subtraction
+        var c = a - b;
+        document.write("<br>" + "Sub of" + " " + a + " " + "and" + " " + b + " " + "is" + " " + c);
+
+        // multiplication
+        var c = a * b;
+        document.write("<br>" + "Mul of" + " " + a + " " + "and" + " " + b + " " + "is" + " " + c);
+
+        // division
+        var c = a / b;
+        document.write("<br>" + "Div of" + " " + a + " " + "and" + " " + b + " " + "is" + " " + c);
+
+        // modulus
+        var c = a % b;
+        document.write("<br>" + "Mod of" + " " + a + " " + "and" + " " + b + " " + "is" + " " + c);
+
+
+        document.write("<br>" + "<br>");
+
+
+        //Do the following using JS Mathematic Expressions 
+        var x;
+        document.write("Value after variable declaration is:" + " " + x);
+
+        x = 5;
+        document.write("<br>");
+        document.write("Initial value: " + " " + x);
+
+        x = ++x;
+        document.write("<br>");
+        document.write("Value after increment is:  " + " " + x);
+
+        x = x + 7;
+        document.write("<br>");
+        document.write("Value after addition is:   " + " " + x);
+
+        x = --x;
+        document.write("<br>");
+        document.write("Value after decrement is: " + " " + x);
+
+        x = x % 3;
+        document.write("<br>");
+        document.write("The remainder is :    " + " " + x);
+
+
+        document.write("<br>" + "<br>");
+
+
+        // script to store ticket price
+        var ticket = 600;
+        var quantity = 5;
+        var cost = ticket * quantity;
+
+        document.write("Total cost to buy" + " " + quantity + " " + "tickets to movie is" + " " + cost + "PKR")
+
+
+        document.write("<br>" + "<br>");
+
+
+        //code of table
+        var no = 4;
+        var x = 0;
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x));
+
+
+        document.write("<br>" + "<br>");
+
+        //  The Temperature Converter
+
+        //celcius to farenheight
+        var C = 25;
+        var F = (C * 9 / 5) + 32;
+        document.write(C + "C is " + F + "F" + "<br/>");
+
+        //fahrenheight to celcius
+        var F = 70;
+        var C = (F - 32) * 5 / 9;
+        document.write(F + "F is " + C + "C" + "<br/>");
+
+
+        document.write("<br>" + "<br>");
+
+
+        // program to implement checkout process of a shopping cart system for an e-commerce website
+        var item1_Price = 650;
+        var item2_Price = 100;
+
+        var item_1_quantity = 3;
+        var item_2_quantity = 7;
+
+        var item_1_cost = item1_Price * item_1_quantity;
+        var item_2_cost = item2_Price * item_2_quantity;
+
+        var Shipping = 100;
+
+        var total = item_1_cost + item_2_cost + Shipping;
+
+        //Printing Reciept
+        document.write("Price of Item 1 is " + item1_Price + "<br/>");
+        document.write("Quantity of Item 1 is " + item_1_quantity + "<br/>");
+        document.write("Price of Item 2 is " + item2_Price + "<br/>");
+        document.write("Quantity of Item 2 is " + item_2_cost + "<br/>");
+        document.write("Shipping Charges " + Shipping + "<br/>");
+        document.write("Total cost of your order is " + total);
+
+
+        document.write("<br>" + "<br>");
+
+
+        //marksheet
+        var totalMarks = 980;
+        var obttainMarks = 804;
+        var Percentage = (totalMarks / obttainMarks) * 100;
+
+        document.write("<h3>" + "Marks Sheet" + "</h3>");
+        document.write("Total Marks: " + totalMarks + "<br/>");
+        document.write("Marks Obtained: " + obttainMarks + "<br/>");
+        document.write("Percentage: " + Percentage);
+
+
+        document.write("<br>" + "<br>");
+
+
+        //Currency conversion
+        var dollarRate = 104.80;
+        var riyalRate = 28;
+        var pkr = (10 * dollarRate) + (25 * riyalRate);
+        document.write("<h3>" + "Currency Conversion in PKR" + "</h3>");
+        document.write("Total Currency in PKR: " + pkr);
+        
+
+        document.write("<br>" + "<br>");
+
+
+        //Arithmetic calculations
+        var num = 7;
+        num = (((num + 5) * 10)/2);
+        document.write("<h3>" + "Arithmetic Operation in single statement" + "</h3>");
+        document.write("Output: " + num);
+
+
+        document.write("<br>" + "<br>");
+
+
+        //Age Calculator
+        var currentYear = 2020;
+        var birthYear = 1998;
+        var Age = currentYear - birthYear;
+
+        document.write("<h3>" + "Age Calculator" + "</h3>");
+        document.write("Current Year: " + currentYear + "<br/>");
+        document.write("Birth Year: " + birthYear + "<br/>");
+        document.write("Your age is: " + Age);
+
+
+        document.write("<br>" + "<br>");
+
+
+        // Calculate properties of a circle. a. Store a radius into a variable. 
+        var radius = 7;
+        var circumference = 2 * 3.142 * radius; 
+        var area = 3.142 * radius * radius;
+
+        document.write("<h3>" + "The Geometrizer" + "</h3>");
+        document.write("Radius of a Circle: " + radius + "<br/>");
+        document.write("The circumference is: " + circumference + "<br/>");        
+        document.write("The area is: " + area);
+
+
+        document.write("<br>" + "<br>");
+
+
+        // The Lifetime Supply Calculator
+        var snack = "Chocalate Chip";
+        var age = 22;
+        var maxAge = 60;
+        var amountPerDay = 3;
+        var eat = (maxAge - age) * (365 * amountPerDay);
+
+        document.write("<h3>" + "The Lifetime Supply Calculator" + "</h3>");
+        
+        // Output. 
+        document.write("Favorite Snack: " + snack + "<br/>");
+        document.write("Current Age: " + age + "<br/>");
+        document.write("Estimated Maximum Age: " + maxAge + "<br/>");
+        document.write("Amount of snacks per day: " + amountPerDay + "<br/>");
+        document.write("You will need " + eat + " to last you until the ripe old age of " + maxAge);
+
+
+    </script>
+</body>
+
+</html>
