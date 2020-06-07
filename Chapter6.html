@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. Write a program to take a number in a variable, do the required arithmetic to display the following result in your browser:
+        var a = +prompt("Input a number: ");
+
+        document.write("Result" + "<br/>");
+        document.write("The value of a is: " + a + "<br/>");
+        document.write("..............................................." + "<br/>");
+        document.write("<br/>");
+
+        // Pre-Increment
+        document.write("The value of ++a is: " + ++a + "<br/>");
+        document.write("Now the value of a is: " + a + "<br/>");
+        document.write("<br/>");
+
+        // Post- Increment
+        document.write("The value of a++ is: " + a++ + "<br/>");
+        document.write("Now the value of a is: " + a + "<br/>")
+        document.write("<br/>");
+
+        // Pre-Decrement
+        document.write("The value of --a is: " + --a + "<br/>");
+        document.write("Now the value of a is: " + a + "<br/>");
+        document.write("<br/>");
+
+        // Post-Decrement
+        document.write("The value of a-- is: " + a-- + "<br/>");
+        document.write("Now the value of a is: " + a + "<br/>");
+
+
+        document.write("<br/>" + "<br/>");
+
+
+        // 2. What will be the output in variables a, b & result after execution of the following script:
+        // var a = 2, b = 1;
+        // var result = --a - --b + ++b + b--;
+        // Explain the output at each stage:
+
+        var a = 2;
+        var b = 1;
+        var result = --a - --b + ++b + b--;
+
+        document.write("The value of a is " + a + "<br/>");
+        document.write("The value of b is " + b + "<br/>");
+        document.write("The result is " + result + "<br/>" + "<br/>");
+
+        document.write("<b>" + "Explanation of Solution" + "</b>" + "<br/>");
+        document.write("a = 2, b = 1" + "<br/>");
+        document.write("--a  -  --b  +  ++b  +  b--" + "<br/>");
+        document.write("--a" + "<br/>");
+        document.write("  1" + "<br/>");
+        document.write("--a  -  --b" + "<br/>");
+        document.write("  1  -   0 " + "<br/>");
+        document.write("--a  -  --b  +  ++b" + "<br/>");
+        document.write("  1  -   0   +    1 " + "<br/>");
+        document.write("--a  -  --b  +  ++b   +  b--" + "<br/>");
+        document.write("  1  -   0   +    1   +   1" + "<br/>");
+        document.write("  1 +    1   +    1 " + "<br/>");
+        document.write("3" + "<br/>");
+
+
+        document.write("<br/>" + "<br/>");
+
+
+        //3. Write a program that takes input a name from user & greet the user. 
+        var name = prompt("Enter your name");
+        document.write("Good Morning!" + " " + name + " " + "Have a nice day.");
+
+        document.write("<br/>" + "<br/>");
+
+
+        // 4. Write a program to take input a number from user & display it’s multiplication table on your browser.
+        // If user does not enter a new number, 
+        // multiplication table of 5 should be displayed by default. 
+        var no = 5 , x = 0;
+        var no = +prompt("Enter table no");
+        document.write("Table" + "</b>" + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x) + "<br/>");
+        document.write(no + " x " + ++x + " = " + (no * x));
+
+
+        document.write("<br/>" + "<br/>");
+
+
+        // 5. Marksheet
+        document.write("<h3>" + "Marksheet" + "</h3>");
+
+        // a) Take three subjects name from user and store them in 3 different variables. 
+        subject1 = prompt("Enter Name of Subject 1: ");
+        subject2 = prompt("Enter Name of Subject 2: ");
+        subject3 = prompt("Enter Name of Subject 3: ");
+
+        // b) Total marks for each subject is 100, store it in another variable.
+        var totalMarks = 300;
+        
+        // c) Take obtained marks for first subject from user and stored it in different variable.
+        subject1Marks = +prompt("Enter Marks of " + subject1);
+
+        // d) Take obtained marks for remaining 2 subjects from user and store them in variables.
+        subject2Marks = +prompt("Enter Marks of " + subject2);
+        subject3Marks = +prompt("Enter Marks of " + subject3);
+
+        // e) Now calculate total marks and percentage and show the result in browser like this.(Hint: user table)
+        var percentage1 = (subject1Marks / 100) * 100;
+        var percentage2 = (subject2Marks / 100) * 100;
+        var percentage3 = (subject3Marks / 100) * 100;
+
+        var obtainedMarks = (subject1Marks + subject2Marks + subject3Marks);
+        var percentage = (obtainedMarks / totalMarks) * 100;
+        percentage = percentage.toFixed(3);
+       
+
+        document.write("<Table>");
+
+            document.write("<tr>");
+                document.write("<th>" + "Subject"  + "</th>");
+                document.write("<th>" + "Total Marks"  + "</th>");
+                document.write("<th>" + "Obtained Marks"  + "</th>");
+                document.write("<th>" + "Percentage"  + "</th>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                document.write("<td>" + subject1  + "</td>");
+                document.write("<td>" + 100  + "</td>");
+                document.write("<td>" + subject1Marks  + "</td>");
+                document.write("<td>" + percentage1 + "%" + "</td>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                document.write("<td>" + subject2  + "</td>");
+                document.write("<td>" + 100  + "</td>");
+                document.write("<td>" + subject2Marks  + "</td>");
+                document.write("<td>" + percentage2 + "%" + "</td>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                document.write("<td>" + subject3 + "</td>");
+                document.write("<td>" + 100  + "</td>");
+                document.write("<td>" + subject3Marks  + "</td>");
+                document.write("<td>" + percentage3 + "%" + "</td>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                document.write("<th>" + "</th>");
+                document.write("<th>" + totalMarks  + "</th>");
+                document.write("<th>" + obtainedMarks  + "</th>");
+                document.write("<th>" + percentage + "%" + "</th>");
+            document.write("</tr>");
+
+
+        document.write("</Table>");
+
+
+</script>
+</body>
+
+</html>
