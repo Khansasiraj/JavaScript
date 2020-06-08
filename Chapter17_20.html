@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //3. Write a program to print numeric counting from 1 to 10. 
+        for (x=1; x <= 10; x++) {
+            document.write(x + "<br>");
+        }
+
+
+        document.write("<br>" + "<br>");
+
+
+        // 4. Write a program to print multiplication table of any number using for loop. 
+        // Table number & length should be taken as an input from user.  
+        var table = +prompt("Enter Table Number");
+        var lenght = +prompt("Enter lenght of table");
+
+        document.write("<h3>" + " Table of" + " " + table + "</h3>")
+        document.write("<h3>" + " lenght" + " " + lenght + "</h3>")
+        for(i=1; i<=lenght ;i++){
+            document.write(table + " " + "x" + " " + i + " " + "=" + (i*table)+ "<br>");
+        }
+        
+
+        document.write("<br>" + "<br>");
+
+
+        //5. Write a program to print items of the following array using for loop: 
+        //fruits = [“apple”, “banana”, “mango”, “orange”, “strawberry”] 
+ 
+
+
+    </script>
+</body>
+
+</html>

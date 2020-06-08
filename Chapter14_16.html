@@ -89,84 +89,84 @@
         document.write("<br>" + "<br>");
 
 
-        // 9. Initialize an array with color names. 
-        // Display the array elements in your browser. 
-        var colors = ["blue", "black", "orange", "red"];
-        document.write(colors + "<br>");
+        // // 9. Initialize an array with color names. 
+        // // Display the array elements in your browser. 
+        // var colors = ["blue", "black", "orange", "red"];
+        // document.write(colors + "<br>");
 
 
-        // a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array. 
-        // Display the updated array in your browser. 
-        var addColor = prompt("what color you wants to add to the beginning");
-        colors.unshift(addColor);
-        document.write("Add color to the beginning : " + " " + colors + "<br>");
+        // // a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array. 
+        // // Display the updated array in your browser. 
+        // var addColor = prompt("what color you wants to add to the beginning");
+        // colors.unshift(addColor);
+        // document.write("Add color to the beginning : " + " " + colors + "<br>");
 
 
-        // b. Ask the user what color he/she wants to add to the end & add that color to the end of the array. 
-        // Display the updated array in your browser.
-        var addColor = prompt("what color you wants to add to the end");
-        colors.push(addColor);
-        document.write("Add color to the end : " + " " + colors + "<br>");
+        // // b. Ask the user what color he/she wants to add to the end & add that color to the end of the array. 
+        // // Display the updated array in your browser.
+        // var addColor = prompt("what color you wants to add to the end");
+        // colors.push(addColor);
+        // document.write("Add color to the end : " + " " + colors + "<br>");
 
 
-        // c. Add two more color to the beginning of the array. 
-        // Display the updated array in your browser.
-        var addColor = prompt("again what color you wants to add to the beginning");
-        colors.unshift(addColor);
+        // // c. Add two more color to the beginning of the array. 
+        // // Display the updated array in your browser.
+        // var addColor = prompt("again what color you wants to add to the beginning");
+        // colors.unshift(addColor);
 
-        var addColor = prompt("Add one more color that you wants to add to the beginning");
-        colors.unshift(addColor);
-        document.write("Add two more colors to the start : " + " " + colors + "<br>");
-
-
-        // d. Delete the first color in the array. 
-        // Display the updated array in your browser.
-        colors.shift();
-        document.write("delete color from start : " + " " + colors + "<br>");
+        // var addColor = prompt("Add one more color that you wants to add to the beginning");
+        // colors.unshift(addColor);
+        // document.write("Add two more colors to the start : " + " " + colors + "<br>");
 
 
-        // e. Delete the last color in the array. 
-        // Display the updated array in your browser. 
-        colors.pop();
-        document.write("delete color from start end : " + " " + colors + "<br>");
+        // // d. Delete the first color in the array. 
+        // // Display the updated array in your browser.
+        // colors.shift();
+        // document.write("delete color from start : " + " " + colors + "<br>");
 
 
-        // f. Ask the user at which index he/she wants to add a color & color name. 
-        // Then add the color to desired position/index. 
-        // Display the updated array in your browser.
-        var index = +prompt("Write index number where you want to add color")
-        var addColor = prompt("what color you want to add");
-        colors.splice(index, 0, addColor)
-        document.write("updated array : " + " " + colors + "<br>");
+        // // e. Delete the last color in the array. 
+        // // Display the updated array in your browser. 
+        // colors.pop();
+        // document.write("delete color from start end : " + " " + colors + "<br>");
 
 
-        // g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. 
-        // Then remove the same number of color(s) from user-defined position/index. . Display the updated array in your browser.
-        var index = +prompt("Write index number from where you want to delete color")
-        var index2 = +prompt("how many colors you want to delete")
-        colors.splice(index, index2)
-        document.write("updated array : " + " " + colors + "<br>");
+        // // f. Ask the user at which index he/she wants to add a color & color name. 
+        // // Then add the color to desired position/index. 
+        // // Display the updated array in your browser.
+        // var index = +prompt("Write index number where you want to add color")
+        // var addColor = prompt("what color you want to add");
+        // colors.splice(index, 0, addColor)
+        // document.write("updated array : " + " " + colors + "<br>");
 
 
-        document.write("<br>" + "<br>");
+        // // g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. 
+        // // Then remove the same number of color(s) from user-defined position/index. . Display the updated array in your browser.
+        // var index = +prompt("Write index number from where you want to delete color")
+        // var index2 = +prompt("how many colors you want to delete")
+        // colors.splice(index, index2)
+        // document.write("updated array : " + " " + colors + "<br>");
+
+
+        // document.write("<br>" + "<br>");
 
 
         //10. Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method. 
-        var arr = [59,25,66,45,75,23];
-        document.write("students scores : " +  "<br>" + arr +  "<br>");
+        var arr = [59, 25, 66, 45, 75, 23];
+        document.write("students scores : " + "<br>" + arr + "<br>");
 
         var sorted = arr.sort()
-        document.write("sorted scores : " +  "<br>" + sorted);
+        document.write("sorted scores : " + "<br>" + sorted);
 
 
         document.write("<br>" + "<br>");
 
 
         //11. Write a program to initialize an array with city names. Copy 3 array elements from cities array to selectedCities array. 
-        var cities = ["karachi","lahore","murre","islamabad","hyderabad","quetta"];
-        document.write("cities are" + "<br>" + cities  + "<br>");
+        var cities = ["karachi", "lahore", "murre", "islamabad", "hyderabad", "quetta"];
+        document.write("cities are" + "<br>" + cities + "<br>");
 
-        var selectedCities = cities.slice(1,4);
+        var selectedCities = cities.slice(1, 4);
         document.write("selected cities are" + "<br>" + selectedCities);
 
 
@@ -176,19 +176,73 @@
         // 12.  Write a program to create a single string from the below mentioned array: 
         // var arr = [“This ”, “ is ”, “ my ”, “ cat”]; 
         // (Use array’s join method) 
-        var arr = ["This" , "is" , "my" , "cat"];
+        var arr = ["This", "is", "my", "cat"];
+        document.write("Array" + "<br>" + arr + "<br>" + "<br>");
+
         var arr1 = arr.join(" ")
-        document.write(arr1);
+        document.write("String" + "<br>" + arr1);
+
 
 
         document.write("<br>" + "<br>");
 
 
 
+        // 13. Create a new array. 
+        // Store values one by one in such a way that you can access the values in the order in which they were stored. 
+        // (FIFO-First In First Out) 
+        var devices = ["Keyboard", "Mouse", "Printer", "Monitor"];
+        var out;
+        document.write("Devices:" + "<br/>" + devices + "<br/>" + "<br/>");
+
+        out = devices.shift();
+        document.write("Out:" + "<br/>" + out + "<br/>");
+        out = devices.shift();
+        document.write("Out:" + "<br/>" + out + "<br/>");
+        out = devices.shift();
+        document.write("Out:" + "<br/>" + out + "<br/>");
+        out = devices.shift();
+        document.write("Out:" + "<br/>" + out );
 
 
+        document.write("<br>" + "<br>");
 
 
+        // 14. Create a new array. 
+        // Store values one by one in such a way that you can access the values in reverse order. 
+        // (Last InFirst Out) 
+        var devices = ["Keyboard", "Mouse", "Printer", "Monitor"];
+        var out;
+        document.write("Devices:" + "<br/>" + devices + "<br/>" + "<br/>");
+
+        out = devices.pop();
+        document.write("Out:" + "<br/>" + out + "<br/>");
+        out = devices.pop();
+        document.write("Out:" + "<br/>" + out + "<br/>");
+        out = devices.pop();
+        document.write("Out:" + "<br/>" + out + "<br/>");
+        out = devices.pop();
+        document.write("Out:" + "<br/>" + out );
+
+
+        document.write("<br>" + "<br>");
+
+
+        // 15. Write a program to store phone manufacturers (Apple, Samsung, Motorola, Nokia, Sony & Haier) in an array. 
+        // Display the following dropdown/select menu in your browser using document.write() method: 
+        var phone = ["Apple", "Samsung", "Motorola", "Nokia", "Sony" , "Haier"];
+        var i=0;
+
+        document.write("<select>");
+            document.write("<option>" + phone[i++] + "</option>" );
+            document.write("<option>" + phone[i++] + "</option>" );
+            document.write("<option>" + phone[i++] + "</option>" );
+            document.write("<option>" + phone[i++] + "</option>" );
+            document.write("<option>" + phone[i++] + "</option>" );
+        document.write("</select>");
+
+
+        document.write("<br>" + "<br>");
     </script>
 </body>
 
