@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         //1. Write a program that takes a positive integer from user & display the following in your browser. 
@@ -50,7 +52,7 @@
 
         //4. Write a program that simulates a dice using random() method of JS Math class. Display the value of dice in your browser.:
         var num = Math.random() * 6;
-        
+
 
         document.write("random dice value :" + " " + Math.round(num));   
 
@@ -92,13 +94,25 @@
         //b. 50kgs 
         //c. 50.2kgs 
         //d. 50.2kilograms 
-        
+        var weight = prompt("Enter your weight")
+        var value = "";
+
+        for (i = 0; i <= weight.length - 1; i++) {
+            if (weight.charCodeAt(i) >= 48 && weight.charCodeAt(i) <= 57 || weight.charCodeAt(i) == 46) {
+                value = weight[i];
+                document.write("The weight of user is" + " " + value + "kilograms");
+            }
+
+        }
+
+
+        document.write("<br>" + "<br>");
 
 
         //8. Write a program that stores a random secret number from 1 to 10 in a variable. 
         //Ask the user to input a number between 1 and 10. If the user input equals the secret number, congratulate the user.
-        var secretNum = Math.random() * 10;
-        secretNum = Math.round(secretNum);
+        // var secretNum = Math.random() * 10;
+        // secretNum = Math.round(secretNum);
 
         var num = +prompt("Enter any number from 1 to 10")
 
@@ -114,4 +128,5 @@
 
     </script>
 </body>
+
 </html>
