@@ -372,13 +372,16 @@ document.write("<br>" + "<br>");
 var weight = prompt("Enter your weight")
 var value = "";
 
+document.write("The weight of user is" + " ");
+
 for (i = 0; i <= weight.length - 1; i++) {
     if (weight.charCodeAt(i) >= 48 && weight.charCodeAt(i) <= 57 || weight.charCodeAt(i) == 46) {
         value = weight[i];
-        document.write("The weight of user is" + " " + value + "kilograms");
+        document.write(value);
     }
 
 }
+document.write(" " + "kilograms");
 
 
 document.write("<br>" + "<br>");

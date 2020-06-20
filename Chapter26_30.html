@@ -35,7 +35,7 @@
         document.write("number : " + " " + num + " <br>");
         document.write("round off value : " + " " + Math.round(num) + " <br>");
         document.write("floor value : " + " " + Math.floor(num) + " <br>");
-        document.write("ceil value : " + " " + Math.ceil(num) );
+        document.write("ceil value : " + " " + Math.ceil(num));
 
 
         document.write("<br>" + "<br>");
@@ -44,7 +44,7 @@
         //3. Write a program that displays the absolute value of a number. E.g. absolute value of -4 is 4 & absolute value of 5 is 5 
         var num = +prompt("Enter any number");
 
-        document.write("absolute value of" + " " + num + " " + "is" + " " + Math.abs(num));   
+        document.write("absolute value of" + " " + num + " " + "is" + " " + Math.abs(num));
 
 
         document.write("<br>" + "<br>");
@@ -54,7 +54,7 @@
         var num = Math.random() * 6;
 
 
-        document.write("random dice value :" + " " + Math.round(num));   
+        document.write("random dice value :" + " " + Math.round(num));
 
 
         document.write("<br>" + "<br>");
@@ -64,13 +64,11 @@
         var num = Math.random() * 2;
         var toss = Math.ceil(num)
 
-        if(toss == 2)
-        {
+        if (toss == 2) {
             document.write(toss + "<br>")
             document.write("random coin value : Heads")
         }
-        else if(toss == 1)
-        {
+        else if (toss == 1) {
             document.write(toss + "<br>")
             document.write("random coin value : Tails")
         }
@@ -82,7 +80,7 @@
         //6. Write a program that shows a random number between 1 and 100 in your browser.
         var num = Math.random() * 100;
 
-        document.write("random number between 1 and 100 :" + " " + Math.round(num));   
+        document.write("random number between 1 and 100 :" + " " + Math.round(num));
 
 
         document.write("<br>" + "<br>");
@@ -97,13 +95,16 @@
         var weight = prompt("Enter your weight")
         var value = "";
 
+        document.write("The weight of user is" + " ");
+
         for (i = 0; i <= weight.length - 1; i++) {
             if (weight.charCodeAt(i) >= 48 && weight.charCodeAt(i) <= 57 || weight.charCodeAt(i) == 46) {
                 value = weight[i];
-                document.write("The weight of user is" + " " + value + "kilograms");
+                document.write(value);
             }
 
         }
+        document.write(" " + "kilograms");
 
 
         document.write("<br>" + "<br>");
@@ -116,12 +117,10 @@
 
         var num = +prompt("Enter any number from 1 to 10")
 
-        if(secretNum == num)
-        {
-             alert("congratulate you win")
+        if (secretNum == num) {
+            alert("congratulate you win")
         }
-        else
-        {
+        else {
             alert("try again")
         }
 
