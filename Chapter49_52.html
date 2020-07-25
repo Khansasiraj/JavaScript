@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Create a signup form and display form data in your web page on submission.  -->
+    <form action="">
+        <label>Name</label>
+        <input type="text" name="" id="name"> <br> <br>
+
+        <label>Father Name</label>
+        <input type="text" name="" id="fname"> <br> <br>
+
+        <label>Email</label>
+        <input type="text" name="" id="email"> <br> <br>
+
+        <label>Contact</label>
+        <input type="text" name="" id="contact"> <br> <br>
+
+        <label>Address</label>
+        <input type="text" name="" id="address"> <br> <br>
+
+        <button onclick="signup()">Submit</button>
+    </form>
+
+
+    <!-- 2. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look.
+     When user clicks on “Read more” button, full detail of that particular item will be displayed.  -->
+    <p id="before">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        <a href="javascript:void(0);" style="color: red;" onclick="readMore()">Read More</a>
+    </p>
+    
+
+    <script>
+        //1. Create a signup form and display form data in your web page on submission. 
+        function signup() {
+            var name = document.getElementById('name').value;
+            var fname = document.getElementById('fname').value;
+            var email = document.getElementById('email').value;
+            var contact = document.getElementById('contact').value;
+            var address = document.getElementById('address').value;
+
+            document.write("Name = " + name + "<br>")
+            document.write("Father Name = " + fname + "<br>")
+            document.write("email = " + email + "<br>")
+            document.write("contact = " + contact + "<br>")
+            document.write("address = " + address + "<br>")
+        }
+
+
+        //2. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. 
+        //When user clicks on “Read more” button, full detail of that particular item will be displayed. 
+        function readMore() {
+            // var before = document.getElementById('before').innerHTML;
+            var add = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            document.getElementById('before').innerHTML = add;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

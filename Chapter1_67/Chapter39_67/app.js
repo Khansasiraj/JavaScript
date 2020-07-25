@@ -240,36 +240,34 @@ currencyNotes(cash);
 
 // ---------------------------------  Chapter_43 to 48 (EVENTS) -----------------------------------
 //1. Show an alert box on click on a link. 
-function clickAlert(){
+function clickAlert() {
     alert("hello world")
 }
 
 //2. Display some Mobile images in browser. On click on an image Show the message in alert to user. 
-function showAlert(){
+function showAlert() {
     alert("Thank you for buying mobile from us")
 }
 
 //3. Display 10 student records in table and each row should contain a delete button. 
 ///If you click on a button to delete a record, entire row should be deleted.
-function deleteData(delBtn){
+function deleteData(delBtn) {
     var data = document.getElementById("data");
     data.deleteRow(delBtn.parentNode.parentNode.rowIndex);
 }
 
 //5. Show a counter in browser. Counter should increase on click on increase button and decrease on click on decrease button. 
 //And show updated counter value in browser. 
-function increase()
-{
-    var add = document.getElementById('value').innerHTML;  
-    add = parseInt(add);    
+function increase() {
+    var add = document.getElementById('value').innerHTML;
+    add = parseInt(add);
     add = add + 1;
     document.getElementById('value').innerHTML = add;
 }
 
-function decrease()
-{
-    var del = document.getElementById('value').innerHTML;  
-    del = parseInt(del);    
+function decrease() {
+    var del = document.getElementById('value').innerHTML;
+    del = parseInt(del);
     del = del - 1;
     document.getElementById('value').innerHTML = del;
 }
@@ -285,6 +283,108 @@ function decrease()
 
 
 
-// ---------------------------------  Chapter_43 to 48 (EVENTS) -----------------------------------
+// ---------------------------------  Chapter_49 to 52 (EVENTS) -----------------------------------
+//1. Create a signup form and display form data in your web page on submission. 
+function signup() {
+    var name = document.getElementById('name').value;
+    var fname = document.getElementById('fname').value;
+    var email = document.getElementById('email').value;
+    var contact = document.getElementById('contact').value;
+    var address = document.getElementById('address').value;
 
-// ----------------------------------------  Chapter_43 to 48 End -----------------------------------------
+    document.write("Name = " + name + "<br>")
+    document.write("Father Name = " + fname + "<br>")
+    document.write("email = " + email + "<br>")
+    document.write("contact = " + contact + "<br>")
+    document.write("address = " + address + "<br>")
+}
+
+
+//2. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. 
+//When user clicks on “Read more” button, full detail of that particular item will be displayed. 
+function readMore() {
+    // var before = document.getElementById('before').innerHTML;
+    var add = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    document.getElementById('before').innerHTML = add;
+
+}
+// ----------------------------------------  Chapter_49 to 52 End -----------------------------------------
+
+
+
+
+
+
+
+
+
+// ---------------------------------  Chapter_53 to 57 (EVENTS) -----------------------------------
+
+// ----------------------------------------  Chapter_53 to 57 End -----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------------------  Chapter_58 to 67 (DOM) -----------------------------------
+
+// ------------TASK O1 ----------------
+
+//i. Get element of id “main-content” and assign them in a variable
+var main = document.getElementById("main-content")
+
+//ii. Display all child elements of “main-content” element. 
+console.log(main.children)
+
+//iii. Get all elements of class “render” and show their innerHTML in browser. 
+var render = document.getElementsByClassName("render");
+for (i = 0; i < render.length; i++) {
+    document.write(render[i].innerHTML + "<br>")
+}
+
+//iv. Fill input value whose element id first-name using javascript. 
+var fName = document.getElementById("first-name");
+fName.value = "khansa";
+
+//v. Repeat part iv for id ”last-name” and “email”.
+var lName = document.getElementById("last-name");
+lName.value = "siraj";
+
+var email = document.getElementById("email");
+email.value = "khansasiraj@yahoo.com";
+
+// ------------TASK O2 ----------------
+
+//i. What is node type of  element having id “form-content”.
+var a = document.getElementById("form-content").nodeType;
+console.log(a)
+
+//ii. Show node type of element having id “lastName” and its child node.
+var b = document.getElementById("lastName")
+console.log(b.nodeType)
+console.log(b.childNodes.nodeType)
+
+//iii. Update child node of element having id “lastName”. 
+b.innerHTML = 'Updated Text';
+
+// iv. Get First and last child of id “main-content”.
+var fChild = document.getElementById('main-content').firstChild;
+var lChild = document.getElementById('main-content').lastChild;
+
+// v. Get next and previous siblings of id “lastName”.
+var nSibling = document.getElementById('lastName').nextSibling;
+var pSibling = document.getElementById('lastName').previousSibling
+
+// vi. Get parent node and node type of element having id “email”
+var pId = document.getElementById('email').parentNode
+var nType = document.getElementById('email').nodeType
+
+// ----------------------------------------  Chapter_58 to 67 End -----------------------------------------
