@@ -308,6 +308,56 @@ function readMore() {
     document.getElementById('before').innerHTML = add;
 
 }
+
+//3. Create a form which takes student’s details and show each student detail in table. Each row of table must contain a delete button and an edit button. On click on delete button entire row should be deleted. On click on edit button, a hidden form will appear with the values of that row. 
+
+var table = document.getElementById('recordTable')
+
+function addRecord() {
+    var studentName = document.getElementById('stdName')
+    var studentClass = document.getElementById('stdClass')
+    var row = document.createElement('tr')
+    var nametd = document.createElement('td')
+    var classtd = document.createElement('td')
+    var edittd = document.createElement('td')
+    var deletetd = document.createElement('td')
+    var nameText = document.createTextNode(studentName.value)
+    var classText = document.createTextNode(studentClass.value)
+    var editBtn = document.createElement('button')
+    var editText = document.createTextNode("Edit")
+    editBtn.setAttribute('onclick', 'editRecord(this)')
+    editBtn.appendChild(editText)
+    var delBtn = document.createElement('button')
+    var delText = document.createTextNode("Delete")
+    delBtn.setAttribute('onclick', 'deleteRecord(this)')
+    delBtn.appendChild(delText)
+
+    nametd.appendChild(nameText)
+    classtd.appendChild(classText)
+    edittd.appendChild(editBtn)
+    deletetd.appendChild(delBtn)
+    row.appendChild(nametd)
+    row.appendChild(classtd)
+    row.appendChild(edittd)
+    row.appendChild(deletetd)
+    table.appendChild(row)
+
+    studentName.value = ""
+    studentClass.value = ""
+}
+
+function editRecord(e) {
+    var val = e.parentNode.parentNode.firstChild.innerText
+    var newVal = prompt("Edit your record", val)
+    var classval = e.parentNode.parentNode.firstChild.nextSibling.innerText
+    var newClass = prompt("Edit your Class", classval)
+    e.parentNode.parentNode.firstChild.innerText = newVal
+    e.parentNode.parentNode.firstChild.nextSibling.innerText = newClass
+}
+
+function deleteRecord(e) {
+    e.parentNode.parentNode.remove()
+}
 // ----------------------------------------  Chapter_49 to 52 End -----------------------------------------
 
 
@@ -320,6 +370,39 @@ function readMore() {
 
 // ---------------------------------  Chapter_53 to 57 (EVENTS) -----------------------------------
 
+// 1. Consider you have 4 images in a file as shown below: Now When you click on an image it should display in a modal.
+
+function closeModal() {
+    document.getElementById("main").className = "hidden"
+}
+
+function showModal(id, src) {
+    document.getElementById("main").className = "visible"
+    var imageModal = document.getElementById("modalImg")
+    var image = document.getElementById(id);
+    imageModal.src = src;
+}
+
+
+// 2. Create a paragraph and two buttons “zoom in "(+) and “zoom out"(-).
+
+function zoomIn() {
+    var font = document.getElementById("pera").style.fontSize
+    font = font.slice(0, length - 2)
+    font = parseInt(font)
+    font += 10
+    font = font + "px"
+    document.getElementById("pera").style.fontSize = font
+}
+
+function zoomOut() {
+    var font = document.getElementById("pera").style.fontSize
+    font = font.slice(0, length - 2)
+    font = parseInt(font)
+    font -= 10
+    font = font + "px"
+    document.getElementById("pera").style.fontSize = font
+}
 // ----------------------------------------  Chapter_53 to 57 End -----------------------------------------
 
 

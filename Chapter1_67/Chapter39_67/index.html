@@ -5,6 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+                .mobImage {
+            width: 200px;
+            border: 2px black solid;
+            cursor: pointer;
+        }
+
+        #description {
+            display: none;
+        }
+
+        #main {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+        }
+
+        #imgDiv {
+            background: white;
+            width: 600px;
+            height: 600px;
+            margin: 20px auto;
+
+        }
+
+        #close {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -112,6 +155,27 @@ And show updated counter value in browser.  -->
     <p id="before">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         <a href="javascript:void(0);" style="color: red;" onclick="readMore()">Read More</a>
     </p>
+
+   <!-- 3.  Create a form which takes student’s details and show each student detail in table. 
+   Each row of table must contain a delete button and an edit button. On click on delete button entire row should be deleted. 
+   On click on edit button, a hidden form will appear with the values of that row.   -->
+    <div style="margin: auto; width: 50%;">
+        <label for="stdName">Student Name:</label>
+        <input type="text" id="stdName"><br>
+        <label for="stdClass">Student Class:</label>
+        <input type="text" id="stdClass"><br>
+        <button onclick="addRecord()">Add Student</button>        
+    </div><br>    
+
+    <table  width = 50% align="center" id="recordTable">
+        <tr>
+            <th style="text-align: left;">Name</th>
+            <th style="text-align: left;">Class</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+    </table>
     <!-- ----------------------------------------  Chapter_49 to 52 End ----------------------------------------- -->
 
 
@@ -119,7 +183,27 @@ And show updated counter value in browser.  -->
 
 
     <!-- ---------------------------------  Chapter_53 to 57 (DOM) ----------------------------------- -->
+ <!-- 1. Consider you have 4 images in a file as shown below: Now When you click on an image it should display in a modal. -->
+ <div>
+    <img class="mobImage" id="img" onclick="showModal('img','images/1.jpg')" src="images/1.jpg" alt="#">
+    <img class="mobImage" id="img" onclick="showModal('img','images/2.jpg')" src="images/2.jpg" alt="#">
+    <img class="mobImage" id="img" onclick="showModal('img','images/3.jpg')" src="images/3.jpg" alt="#">
+    <img class="mobImage" id="img" onclick="showModal('img','images/4.jpg')" src="images/4.jpg" alt="#">
+</div>
 
+<div id="main" class="hidden">
+    <div id="imgDiv">
+        <img src="images/1.jpg" id="modalImg" alt="" width="100%" height="500px">
+        <button id="close" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<!-- 2. Create a paragraph and two buttons “zoom in "(+) and “zoom out"(-). -->
+<p id="pera" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores a, veritatis
+    reprehenderit veniam unde odit distinctio aperiam itaque nam quis commodi, id architecto est doloremque, quasi
+    nesciunt. Reiciendis, enim sed.</p>
+<button onclick="zoomIn()">Zoom +</button>
+<button onclick="zoomOut()">Zoom -</button>
     <!-- ----------------------------------------  Chapter_53 to 57 End ----------------------------------------- -->
 
 

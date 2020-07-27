@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mobImage {
+            width: 200px;
+            border: 2px black solid;
+            cursor: pointer;
+        }
+
+        #description {
+            display: none;
+        }
+
+        #main {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+        }
+
+        #imgDiv {
+            background: white;
+            width: 600px;
+            height: 600px;
+            margin: 20px auto;
+
+        }
+
+        #close {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Consider you have 4 images in a file as shown below: Now When you click on an image it should display in a modal. -->
+    <div>
+        <img class="mobImage" id="img" onclick="showModal('img','images/1.jpg')" src="images/1.jpg" alt="#">
+        <img class="mobImage" id="img" onclick="showModal('img','images/2.jpg')" src="images/2.jpg" alt="#">
+        <img class="mobImage" id="img" onclick="showModal('img','images/3.jpg')" src="images/3.jpg" alt="#">
+        <img class="mobImage" id="img" onclick="showModal('img','images/4.jpg')" src="images/4.jpg" alt="#">
+    </div>
+
+    <div id="main" class="hidden">
+        <div id="imgDiv">
+            <img src="images/1.jpg" id="modalImg" alt="" width="100%" height="500px">
+            <button id="close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- 2. Create a paragraph and two buttons “zoom in "(+) and “zoom out"(-). -->
+    <p id="pera" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores a, veritatis
+        reprehenderit veniam unde odit distinctio aperiam itaque nam quis commodi, id architecto est doloremque, quasi
+        nesciunt. Reiciendis, enim sed.</p>
+    <button onclick="zoomIn()">Zoom +</button>
+    <button onclick="zoomOut()">Zoom -</button>
+
+    <script>
+
+        // 1. Consider you have 4 images in a file as shown below: Now When you click on an image it should display in a modal.
+
+        function closeModal() {
+            document.getElementById("main").className = "hidden"
+        }
+
+        function showModal(id, src) {
+            document.getElementById("main").className = "visible"
+            var imageModal = document.getElementById("modalImg")
+            var image = document.getElementById(id);
+            imageModal.src = src;
+        }
+
+
+        // 2. Create a paragraph and two buttons “zoom in "(+) and “zoom out"(-).
+
+        function zoomIn() {
+            var font = document.getElementById("pera").style.fontSize
+            font = font.slice(0, length - 2)
+            font = parseInt(font)
+            font += 10
+            font = font + "px"
+            document.getElementById("pera").style.fontSize = font
+        }
+
+        function zoomOut() {
+            var font = document.getElementById("pera").style.fontSize
+            font = font.slice(0, length - 2)
+            font = parseInt(font)
+            font -= 10
+            font = font + "px"
+            document.getElementById("pera").style.fontSize = font
+        }
+    </script>
+</body>
+
+</html>
